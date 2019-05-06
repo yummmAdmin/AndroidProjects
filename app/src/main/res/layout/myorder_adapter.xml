@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:gravity="center"
+    android:layout_marginRight="@dimen/_10sdp">
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:gravity="center"
+        android:id="@+id/relative_myorder">
+        <ImageView android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:background="@drawable/placeholder"
+            android:scaleType="fitXY"
+            android:id="@+id/img_restaurant"/>
+
+        <TextView
+            android:id="@+id/text_res_name"
+            android:layout_toRightOf="@+id/img_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wontan Restaurant "
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_13ssp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:fontFamily="@font/myriadpro_regular" />
+
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_toRightOf="@+id/img_restaurant"
+            android:layout_below="@+id/text_res_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_13ssp"
+
+            android:drawableRight="@drawable/right_arrow_cir"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:maxLines="2"
+            android:textColor="@color/booktext_color"
+            android:fontFamily="@font/myriadpro_regular" />
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_below="@+id/text_date"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_11ssp"
+            android:layout_toRightOf="@+id/img_restaurant"
+            android:background="@color/green"
+            android:textColor="@color/white"
+            android:fontFamily="@font/myriadpro_regular"
+            android:padding="@dimen/_3sdp"/>
+        <View android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/view_color"
+            android:layout_below="@+id/img_restaurant"
+            android:layout_marginTop="@dimen/_7sdp"
+       />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2866BF</color>
+    <color name="colorPrimaryDark">#E83B33</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="rectangular_color">#E2E2E2</color>
+    <color name="view_color">#E2E2E2</color>
+    <color name="app_color">#E83B33</color>
+    <color name="white">#ffffff</color>
+    <color name="text_color">#6E6E6E</color>
+    <color name="facebook_color">#425A8C</color>
+    <color name="twitter_color">#54A8DB</color>
+    <color name="insta_color">#666666</color>
+    <color name="linkdin_color">#3379B1</color>
+    <color name="black">#141414</color>
+    <color name="background_color">#90222222</color>
+    <color name="tab_color">#B2B2B2</color>
+    <color name="follower_color">#67B8F5</color>
+    <color name="res_info_color">#7B7B80</color>
+    <color name="green">#9AC03E</color>
+    <color name="booktext_color">#A1A0A4</color>
+    <color name="yellow">#F5C455</color>
+    <color name="cancel_color">#7B7B80</color>
+</resources>

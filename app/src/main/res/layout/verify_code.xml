@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:orientation="vertical">
+        <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close"/>
+        <TextView
+            android:id="@+id/phn_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/myriadpro_regular"
+            android:gravity="center"
+            android:text="@string/phn_no_not_found"
+            android:textColor="@color/app_color"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_25ssp" />
+        <TextView
+            android:id="@+id/phn_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/myriadpro_regular"
+            android:text="@string/not_found"
+            android:layout_below="@+id/phn_verify"
+            style="@style/TextviewStyle"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"
+             />
+    </LinearLayout>
+</RelativeLayout>

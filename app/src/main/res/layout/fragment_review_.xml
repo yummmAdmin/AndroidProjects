@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".get_restaurant_review.Review_Fragment">
+    <TextView
+        android:id="@+id/text_review_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/myriadpro_regular"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="No Review Yet..."
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/_18ssp"/>
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.digitaldestino.utils.CustomRatingBar
+                android:id="@+id/rating_restaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rb_count="5"
+                android:visibility="gone"
+                app:rb_empty="@drawable/profile_star_grey"
+                app:rb_fill="@drawable/star_yellow"
+                app:rb_max_count="5"
+                app:rb_space="3dp" />
+
+            <TextView
+                android:id="@+id/text_total_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rating_restaurant"
+                android:fontFamily="@font/myriadpro_bold"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/_13ssp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/r2"
+        android:layout_below="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/_10sdp">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/text_food"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rating_restaurant"
+                    android:fontFamily="@font/myriadpro_regular"
+                    android:padding="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/follower_color"
+                    android:textSize="@dimen/_11ssp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rating_restaurant"
+                    android:fontFamily="@font/myriadpro_regular"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/food"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/follower_color"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+            <View android:layout_width="@dimen/_1sdp"
+                android:layout_height="wrap_content"
+                android:background="@color/view_color"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/text_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rating_restaurant"
+                    android:fontFamily="@font/myriadpro_regular"
+                    android:padding="@dimen/_4sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:textColor="@color/follower_color"
+                    android:textSize="@dimen/_11ssp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rating_restaurant"
+                    android:fontFamily="@font/myriadpro_regular"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/service"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/follower_color"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+            <View android:layout_width="@dimen/_1sdp"
+                android:layout_height="wrap_content"
+                android:background="@color/view_color"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/text_delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rating_restaurant"
+                    android:fontFamily="@font/myriadpro_regular"
+                    android:padding="@dimen/_4sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:textColor="@color/follower_color"
+                    android:textSize="@dimen/_11ssp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rating_restaurant"
+                    android:fontFamily="@font/myriadpro_regular"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/delivery"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/follower_color"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+            <View android:layout_width="@dimen/_1sdp"
+                android:layout_height="wrap_content"
+                android:background="@color/view_color"/>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/text_enviroment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rating_restaurant"
+                    android:fontFamily="@font/myriadpro_regular"
+                    android:padding="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/follower_color"
+                    android:textSize="@dimen/_11ssp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rating_restaurant"
+                    android:fontFamily="@font/myriadpro_regular"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/enviroment"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/follower_color"
+                    android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@+id/r2"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@color/view_color"/>
+
+    <TextView
+        android:id="@+id/text_user_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:fontFamily="@font/myriadpro_bold"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/_13ssp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_review"
+        android:layout_below="@+id/text_user_review"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

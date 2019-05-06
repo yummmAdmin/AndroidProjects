@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "734372143368",
+    "firebase_url": "https://digital-destino-226107.firebaseio.com",
+    "project_id": "digital-destino-226107",
+    "storage_bucket": "digital-destino-226107.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734372143368:android:9b935a5666e6be73",
+        "android_client_info": {
+          "package_name": "com.digitaldestino"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "734372143368-sdnqbj1jjsij5edpj9n4s52va7kuqs25.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.digitaldestino",
+            "certificate_hash": "abe4fa4fa967bae0476847e4a61f67896f951719"
+          }
+        },
+        {
+          "client_id": "734372143368-mgjhf1g2t55v0cdnk0d0q3a3sh6khiko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJigoPMQMDiE0Aa65d1SdGR5hluFkb8n4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "734372143368-mgjhf1g2t55v0cdnk0d0q3a3sh6khiko.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

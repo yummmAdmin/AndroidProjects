@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/text_res_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:ellipsize="end"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/myriadpro_bold"
+        android:maxLines="2"
+        android:text="Appetizers"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/_15ssp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_dishes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_below="@+id/text_res_name"
+        />
+</RelativeLayout>

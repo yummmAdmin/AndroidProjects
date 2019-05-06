@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_135sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/text_delete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_below="@+id/view"
+            android:fontFamily="@font/myriadpro_regular"
+            android:text="@string/delete_account"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:background="@color/app_color"
+            android:textSize="@dimen/_13ssp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_below="@+id/text_delete"
+            android:background="@drawable/item_rectangular">
+        <TextView
+            android:id="@+id/confirm_deletemsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/black"
+            android:padding="@dimen/_3sdp"
+            android:fontFamily="@font/myriadpro_regular"
+            android:text="@string/confirm_delete_account" />
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_below="@+id/confirm_deletemsg">
+
+        <Button
+            android:id="@+id/btn_no"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:textColor="@color/white"
+            android:text="@string/no"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_13ssp"
+            android:background="@color/app_color"
+            android:fontFamily="@font/myriadpro_regular"/>
+            <Button
+                android:id="@+id/btn_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:textColor="@color/white"
+                android:text="@string/yes"
+                android:textAllCaps="true"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:textSize="@dimen/_13ssp"
+                android:background="@color/app_color"
+                android:fontFamily="@font/myriadpro_regular"/>
+        </LinearLayout>
+    </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

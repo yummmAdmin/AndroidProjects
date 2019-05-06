@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_layout">
+<LinearLayout
+    android:id="@+id/linear_image"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_80sdp"
+    android:gravity="center">
+    <ImageView
+        android:id="@+id/user_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:src="@drawable/jessy" />
+</LinearLayout>
+    <com.digitaldestino.utils.CustomRatingBar
+        android:id="@+id/rating_restaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:rb_count="5"
+        app:rb_empty="@drawable/profile_star_grey"
+        app:rb_fill="@drawable/star_yellow"
+        app:rb_max_count="5"
+        app:rb_space="3dp"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_toRightOf="@+id/linear_image"/>
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriadpro_regular"
+        android:layout_toRightOf="@+id/rating_restaurant"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:gravity="end"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_11ssp" />
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriadpro_regular"
+        android:layout_toRightOf="@+id/linear_image"
+        android:layout_below="@+id/rating_restaurant"
+        android:text="Jaesy Wang"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp" />
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriadpro_regular"
+        android:layout_below="@+id/text_name"
+        android:layout_toRightOf="@+id/linear_image"
+        android:text="@string/dummy"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_11ssp" />
+
+    <View android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/view_color"
+        android:layout_below="@+id/linear_image"
+       />
+</RelativeLayout>

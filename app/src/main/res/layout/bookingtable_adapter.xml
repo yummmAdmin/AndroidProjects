@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="@dimen/_145sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp">
+       <ImageView android:layout_width="@dimen/_100sdp"
+           android:layout_height="@dimen/_110sdp"
+           android:scaleType="fitXY"
+           android:id="@+id/img_restaurant"/>
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@+id/img_restaurant"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/_13ssp"
+            android:background="@color/green"
+            android:textColor="@color/white"
+            android:fontFamily="@font/myriadpro_regular"
+            android:padding="@dimen/_3sdp"/>
+        <View android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/view_color"
+            android:layout_below="@+id/text_status"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_5sdp"/>
+        <TextView
+            android:id="@+id/text_res_name"
+            android:layout_toRightOf="@+id/img_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wontan Restaurant "
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_13ssp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:fontFamily="@font/myriadpro_regular" />
+        <TextView
+            android:id="@+id/text_date"
+            android:layout_toRightOf="@+id/img_restaurant"
+            android:layout_below="@+id/text_res_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:maxLines="2"
+            android:textColor="@color/booktext_color"
+            android:fontFamily="@font/myriadpro_regular" />
+        <TextView
+            android:id="@+id/text_person"
+            android:layout_toRightOf="@+id/img_restaurant"
+            android:layout_below="@+id/text_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Person:2"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:maxLines="2"
+            android:textColor="@color/booktext_color"
+            android:fontFamily="@font/myriadpro_regular" />
+        <TextView
+            android:id="@+id/text_person_detail"
+            android:layout_toRightOf="@+id/img_restaurant"
+            android:layout_below="@+id/text_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personal Detail:Rajesh Sir Plot no-165 Appypie"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:maxLines="2"
+            android:textColor="@color/booktext_color"
+            android:fontFamily="@font/myriadpro_regular" />
+        <TextView
+            android:id="@+id/text_res_address"
+            android:layout_toRightOf="@+id/img_restaurant"
+            android:layout_below="@+id/text_person_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Address:New York"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:maxLines="3"
+            android:textColor="@color/booktext_color"
+            android:fontFamily="@font/myriadpro_regular" />
+    </RelativeLayout>
+</RelativeLayout>

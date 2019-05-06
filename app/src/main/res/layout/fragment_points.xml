@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".points.PointsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_42sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_membership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/myriadpro_bold"
+            android:gravity="center"
+            android:text="@string/membership_point"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/_13ssp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_membership"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_reedem_point"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/myriadpro_regular"
+        android:gravity="center"
+        android:text="@string/reedem_point"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp" />
+
+</RelativeLayout>

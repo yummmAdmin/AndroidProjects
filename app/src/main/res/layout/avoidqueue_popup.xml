@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_135sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/text_delete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_below="@+id/view"
+            android:fontFamily="@font/myriadpro_regular"
+            android:text="@string/enter_name"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:background="@color/app_color"
+            android:textSize="@dimen/_13ssp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_below="@+id/text_delete"
+            android:background="@drawable/item_rectangular">
+            <EditText
+                android:id="@+id/edt_name"
+                style="@style/ProfileEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:fontFamily="@font/myriadpro_regular"
+                android:inputType="text" />
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_below="@+id/edt_name">
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:textColor="@color/white"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_13ssp"
+                    android:background="@color/app_color"
+                    android:fontFamily="@font/myriadpro_regular"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

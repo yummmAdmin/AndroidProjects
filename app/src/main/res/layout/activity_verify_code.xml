@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:id="@+id/hide_keyboard"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/phn_verify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriadpro_regular"
+        android:gravity="center"
+        android:text="@string/verify_code_send"
+        android:textColor="@color/app_color"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:textSize="@dimen/_25ssp" />
+    <TextView
+        android:id="@+id/phn_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/myriadpro_regular"
+        android:text="@string/enter_verification_code"
+        android:layout_below="@+id/phn_verify"
+        style="@style/TextviewStyle"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp" />
+    <TextView
+        android:id="@+id/verification_code"
+        android:layout_below="@+id/phn_text"
+        style="@style/TextviewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/myriadpro_regular"
+        android:text="@string/varification_code" />
+
+    <EditText
+        android:id="@+id/edt_varification_code"
+        android:layout_below="@+id/verification_code"
+        style="@style/EditTextStyle"
+        android:layout_width="match_parent"
+        android:maxLength="6"
+        android:layout_height="@dimen/_35sdp"
+        android:fontFamily="@font/myriadpro_regular"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/ButtonStyle"
+        android:layout_below="@+id/edt_varification_code"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/myriadpro_regular"
+        android:text="@string/submit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/btn_submit"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:id="@+id/txt_verify_code"
+            android:layout_below="@+id/phn_text"
+            style="@style/TextviewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/myriadpro_regular"
+            android:text="@string/dont_receive_code" />
+    </LinearLayout>
+</RelativeLayout>

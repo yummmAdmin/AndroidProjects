@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".order_detail.OrderDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/arrow_red" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_toRightOf="@+id/img_back"
+            android:gravity="end">
+
+            <ImageView
+                android:id="@+id/img_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:src="@drawable/mark" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toRightOf="@id/img_mark"
+                android:src="@drawable/notification" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/book_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear"
+            android:fontFamily="@font/myriadpro_regular"
+            android:gravity="center"
+            android:text="@string/order_detail"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/_18ssp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/book_table"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/view_color" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/r1"
+        android:fillViewport="true"
+        android:layout_marginBottom="@dimen/_42sdp">
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/r2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp">
+                <ImageView android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:background="@drawable/image"
+                    android:scaleType="fitXY"
+                    android:id="@+id/img_restaurant"/>
+
+                <TextView
+                    android:id="@+id/text_res_name"
+                    android:layout_toRightOf="@+id/img_restaurant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wontan Restaurant "
+                    android:layout_marginLeft="@dimen/_5sdp"
+
+                    android:textSize="@dimen/_13ssp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/myriadpro_regular" />
+
+                <TextView
+                    android:id="@+id/text_address"
+                    android:layout_toRightOf="@+id/img_restaurant"
+                    android:layout_below="@+id/text_res_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:ellipsize="end"
+                    android:text="appy pie noida"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:maxLines="1"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/myriadpro_regular" />
+                <TextView
+                    android:id="@+id/text_date"
+                    android:layout_below="@+id/text_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textSize="@dimen/_13ssp"
+                    android:layout_toRightOf="@+id/img_restaurant"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/myriadpro_regular"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/r3"
+                android:layout_below="@+id/r2">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/recycler_item_detail"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/r3">
+                <LinearLayout
+                    android:id="@+id/linear_item_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/recycler_cartList">
+                    <TextView
+                        android:id="@+id/text_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/myriadpro_bold"
+                        android:text="@string/details"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_below="@id/recycler_cartList"/>
+
+                    <LinearLayout
+                        android:id="@+id/subtotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/text_details"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/myriadpro_regular"
+                            android:text="@string/subtotal"
+                            android:layout_weight=".5"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp"/>
+                        <TextView
+                            android:id="@+id/text_subtotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/myriadpro_regular"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/discount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/subtotal"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/myriadpro_regular"
+                            android:text="@string/discount"
+                            android:layout_weight=".5"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp"/>
+                        <TextView
+                            android:id="@+id/text_discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/myriadpro_regular"
+                            android:text="$0"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/discount"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/myriadpro_regular"
+                            android:text="@string/service_tax"
+                            android:layout_weight=".5"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp"/>
+                        <TextView
+                            android:id="@+id/text_service_tax"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/myriadpro_regular"
+                            android:text="10%"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_13ssp"/>
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/view_total"
+                        android:layout_below="@+id/delivery_fee"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/view_color"
+                        android:layout_marginLeft="@dimen/_9sdp"
+                        android:layout_marginRight="@dimen/_9sdp"
+                        android:layout_marginTop="@dimen/_5sdp"/>
+                    <LinearLayout
+                        android:id="@+id/total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/view_total"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_15sdp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/myriadpro_bold"
+                            android:text="@string/total"
+                            android:layout_weight=".5"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_15ssp"/>
+                        <TextView
+                            android:id="@+id/text_totalPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/myriadpro_bold"
+                            android:text="$230"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_15ssp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btn_rate_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:textColor="@color/white"
+            android:background="@drawable/gradient"
+            android:gravity="center"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/myriadpro_regular"
+            android:text="@string/rate_restaurant"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+</RelativeLayout>

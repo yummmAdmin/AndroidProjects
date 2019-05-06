@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp">
+        <ImageView
+            android:id="@+id/article_image"
+            android:layout_width="match_parent"
+            android:layout_height= "@dimen/_130sdp"
+            android:scaleType="fitXY"/>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/myriadpro_regular"
+                android:textColor="@color/white"/>
+            <com.digitaldestino.utils.SmartTextView
+                android:id="@+id/txt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:padding="@dimen/_2sdp"
+                android:fontFamily="@font/myriadpro_regular"
+                android:text="@string/dummy"
+                android:textColor="@color/white"
+                app:justified="true"/>
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.SignUpActivity">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/relative_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <include layout="@layout/mobile_verification" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/logo" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/register"
+                        android:textColor="@color/app_color"
+                        android:textSize="@dimen/_18ssp" />
+
+                    <TextView
+                        android:id="@+id/first_name"
+                        style="@style/TextviewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:text="@string/first_name" />
+
+                    <EditText
+                        android:id="@+id/edt_first_name"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:inputType="text" />
+
+                    <TextView
+                        style="@style/TextviewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:text="@string/last_name" />
+
+                    <EditText
+                        android:id="@+id/edt_last_name"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                        android:inputType="text" />
+
+                    <TextView
+                        style="@style/TextviewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:text="@string/email" />
+
+                    <EditText
+                        android:id="@+id/edt_email"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:inputType="text" />
+
+                    <TextView
+                        style="@style/TextviewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:text="@string/mobile" />
+
+                    <EditText
+                        android:id="@+id/edt_mobile"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:digits="+0123456789"
+                        android:maxLength="14"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:inputType="phone" />
+
+                    <TextView
+                        style="@style/TextviewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:text="@string/password" />
+
+                    <EditText
+                        android:id="@+id/edt_password"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:inputType="textPassword" />
+
+                    <TextView
+                        style="@style/TextviewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:text="@string/confirm_password" />
+
+                    <EditText
+                        android:id="@+id/edt_con_password"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:inputType="textPassword" />
+
+                    <TextView
+                        style="@style/TextviewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:text="@string/address" />
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@drawable/rectangular">
+                    <EditText
+                        android:id="@+id/edt_address"
+                        style="@style/particularEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:focusable="false"
+                        android:background="@null"
+                        android:fontFamily="@font/myriadpro_regular"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <TextView
+                                style="@style/TextviewStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/myriadpro_regular"
+                                android:text="@string/city" />
+
+                            <EditText
+                                android:id="@+id/edt_city"
+                                style="@style/EditTextStyle"
+                                android:layout_width="match_parent"
+                                android:focusable="false"
+                                android:layout_height="@dimen/_35sdp"
+                                android:fontFamily="@font/myriadpro_regular"
+                                android:inputType="text" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/TextviewStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/myriadpro_regular"
+                                android:text="@string/zip_code" />
+
+                            <EditText
+                                android:id="@+id/edt_zip_code"
+                                style="@style/EditTextStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_35sdp"
+                                android:fontFamily="@font/myriadpro_regular"
+                                android:inputType="number"
+                                android:focusable="false"
+                                android:maxLength="10" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView
+                        style="@style/TextviewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:text="@string/referal_code" />
+
+                    <EditText
+                        android:id="@+id/edt_referal_code"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:fontFamily="@font/myriadpro_regular"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/chk_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox_selector"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_13ssp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:text="@string/by_signing_up_you_agree_to"/>
+                    <TextView
+                        android:id="@+id/text_terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/_13ssp"
+
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:text="@string/terms_amp_conditions"/>
+
+                </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        style="@style/ButtonStyle"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/myriadpro_regular"
+                        android:text="@string/submit" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+            <ProgressBar
+                android:id="@+id/dialog_progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center_vertical" />
+        </FrameLayout>
+    </ScrollView>
+
+</RelativeLayout>

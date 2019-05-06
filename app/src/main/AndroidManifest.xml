@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.digitaldestino">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <permission
+        android:name="com.digitaldestino.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name=".permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".articleUI.ArticleActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="31b5f3abb8924a684213e695ac7ca874aedacd23" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
+
+        <activity
+            android:name=".articledetailUI.ArticleDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".loginUI.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".forgot_pwd.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".reset_pwd.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".verify_code.VerifyCodeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".menu_list.MenuActivity" />
+        <activity
+            android:name=".edit_profile.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".change_pwd.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".dishes_restaurentUI.DishesRestaurentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".staticUI.PrivacyPolicy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".restaurant_info.RestaurentInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <service
+            android:name=".fcmClass.FireIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".fcmClass.MyFirebaseMessagingService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".dishes_detail.DishesDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".cart.Cart_Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".book_table.BookTableActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".bookingtable_list.BookingTableList"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".payment.PaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".add_card.AddNewCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".my_order.MyOrderActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".payment_address.PaymentAddress"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".order_detail.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".send_feedback.SendFeedbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".rate_restaurant.RateRestaurantActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".search_activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wishlist.WishlistActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".scan_qr.ScanQrActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".avoid_queue.AvoidQueueActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".setting.SettingActivity" />
+        <activity
+            android:name=".notification.NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referal_code.ReferalCodeActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name=".reedem_point.ReedemPointActivity"></activity>
+    </application>
+
+</manifest>
